@@ -1,0 +1,11 @@
+<resources>
+    <style name="MyAppTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/custom_actionbar</item>
+    </style>
+    <style name="custom_actionbar"
+           parent="Theme.AppCompat.Light">
+        <item name="android:background">@color/main_color</item>
+    </style>
+    
+    <color name="main_color">#303F9F</color>
+</resources>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_color">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/sc_std_element_distance_small"
+            android:background="@color/sc_bright_gray"
+            android:orientation="vertical"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/sc_newmessage_label_name"
+                android:textColor="@color/board_chatinput_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sc_std_element_distance_normal"
+                android:hint="@string/sc_board_part_chatinput_edit_text"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/sc_newmessage_label_number"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/sc_std_element_distance_normal"
+                android:layout_marginRight="@dimen/sc_std_element_distance_normal"
+                android:gravity="left|center_vertical"
+                android:hint="@string/sc_board_part_chatinput_edit_text"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/sc_newmessage_container_sms_header"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/sc_newmessage_label_priceinfo"
+                    style="@style/sc_std_small_text"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/sc_std_element_distance_normal"
+                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+                <TextView
+                    android:id="@+id/sc_newmessage_label_char_count"
+                    style="@style/sc_std_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/sc_newmessage_inputlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sc_newmessage_container_sms_header"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/sc_newmessage_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/sc_std_element_distance_tiny"
+                    android:hint="@string/sc_board_part_chatinput_newmessage_text"
+                    android:scrollbars="vertical" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/sc_newmessage_cb_secure"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:button="@null"
+                        android:background="@drawable/sc_cb_lock"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="2dp"/>
+
+                    <ImageButton
+                        android:id="@+id/sc_newmessage_btn_attach"
+                        style="@style/sc_std_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="@dimen/sc_std_element_distance_small"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:src="@drawable/ic_sc_content_new_attachment_grey"/>
+
+                    <ImageButton
+                        android:id="@+id/sc_newmessage_btn_send"
+                        style="@style/sc_std_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginBottom="@dimen/sc_std_element_distance_tiny"
+
+                        android:enabled="false"
+                        android:src="@drawable/ic_sc_social_send_now_white"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

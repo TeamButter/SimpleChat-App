@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/login_scrollview"
+            style="@style/sc_std_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+    android:fillViewport="false">
+
+    <LinearLayout
+        style="@style/sc_std_layout.normal_inner_distance"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            tools:context=".sdk.activities.CallinActivity">
+
+            <ImageView
+                android:id="@+id/sc_login_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/sc_std_element_distance_normal"
+                android:layout_marginTop="@dimen/sc_std_element_distance_small"
+                android:src="@mipmap/img"/>
+
+            <EditText
+                android:id="@+id/sc_login_edit_email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sc_login_label_email"
+                android:layout_marginBottom="@dimen/sc_std_element_distance_normal"
+                android:inputType="textEmailAddress"
+                tools:ignore="UnusedIds"/>
+
+            <EditText
+                android:id="@+id/sc_login_edit_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/sc_login_label_password"
+                android:inputType="textPassword"
+                tools:ignore="UnusedIds"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <CheckBox
+                    android:id="@+id/sc_login_switch_remember_pass"
+                    style="@style/sc_std_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:checked="true"
+                    android:text="@string/sc_login_btn_remember_password"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5">
+
+                <TextView
+                    android:id="@+id/sc_login_btn_forgot_pass"
+                    style="@style/sc_std_small_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:text="@string/sc_login_label_forgot_password"
+                    android:paddingTop="@dimen/sc_std_element_distance_normal"
+                    android:visibility="visible"
+                    tools:ignore="UnusedIds"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top|center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/sc_login_btn_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/sc_std_element_distance_big"
+                android:text="@string/sc_login_btn_login"
+                tools:ignore="UnusedIds"/>
+
+            <Button
+                android:id="@+id/sc_login_btn_register"
+                style="@style/sc_std_button_big"
+                android:text="Register"
+                tools:ignore="UnusedIds" />
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/login_txt_version"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="5dp"
+            android:textColor="#666"
+            android:gravity="right"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceSmall">
+        </TextView>
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

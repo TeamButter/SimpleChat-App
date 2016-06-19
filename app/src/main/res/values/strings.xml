@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">SimpleChat</string>
+    <string name="login_btn_register">Register</string>
+    <string name="profile">My Profile</string>
+    <string name="board">Board</string>
+    <string name="exit">Logout</string>
+    <color name="board_list_background">#e3eae6</color>
+    <color name="sc_board_incoming_text">#288e52</color>
+    <color name="sc_board_outgoing_text">#ffffff</color>
+    <color name="view_content_messages_history_list_item_header_in_color">#288e52</color>
+    <color name="view_content_messages_history_list_item_header_out_color">#ffffff</color>
+    <color name="board_timestamp">#a3c1b0</color>
+</resources>

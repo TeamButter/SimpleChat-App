@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" 
+    style="@style/sc_std_layout">
+
+    <include 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/sc_filter"/>
+
+    <Button
+        android:id="@+id/sc_board_btn_prev"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sc_board_btn_prev_messages"
+        android:visibility="gone"/>
+        
+    <ListView
+        android:id="@+id/sc_board_list"
+        android:stackFromBottom="true"
+        android:layout_width="match_parent"
+        android:background="@color/board_list_background"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:transcriptMode="normal"
+        android:cacheColorHint="@color/blue"
+        android:divider="#00000000"
+        android:dividerHeight="0px" />
+
+</LinearLayout>

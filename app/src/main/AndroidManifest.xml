@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.nikit.dreamstar.simplechat"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:theme">
+        ...>
+        <receiver
+            android:name="com.c2call.sdk.pub.broadcast.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
+
+                <!-- Relpace [PACKAGE_NAME] with your app's package name as specified in your build.gradle -->
+                <category android:name="com.nikit.dreamstar.simplechat"/>
+
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name=".StartupActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@null"/>
+
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@null" />
+
+        <provider
+            android:name="com.c2call.sdk.pub.db.provider.C2CallContentProvider"
+            android:authorities="com.nikit.dreamstar.simplechat.content"
+            android:exported="true"
+            android:grantUriPermissions="true">
+            <grant-uri-permission android:pathPattern=".*"/>
+        </provider>
+    </application>
+</manifest>

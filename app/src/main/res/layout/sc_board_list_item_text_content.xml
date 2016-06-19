@@ -1,0 +1,59 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <TextView
+        android:id="@+id/sc_boarditem_header"
+        style="@style/sc_std_list_subtitel_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:drawablePadding="@dimen/sc_std_element_distance_small"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:gravity="center_vertical"
+        android:textStyle="bold|italic"
+        android:lines="1" />
+
+    <TextView
+        android:id="@+id/sc_boarditem_number"
+        style="@style/sc_std_small_text.white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:drawablePadding="@dimen/sc_std_element_distance_small"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:lines="1"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="WebViewLayout">
+
+        <TextView
+            android:id="@+id/sc_boarditem_message"
+            style="@style/sc_std_normal_text.white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <WebView
+            android:id="@+id/view_content_messages_history_list_item_html"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:visibility="gone"
+            tools:ignore="UnusedIds" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/sc_boarditem_footer"
+        style="@style/sc_std_small_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</merge>
